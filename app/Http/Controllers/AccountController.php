@@ -6,6 +6,8 @@ use App\Http\Requests\Admin\AccountRequest;
 use App\Models\User;
 use Auth;
 use Hash;
+use RealRashid\SweetAlert\Facades\Alert;
+
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -35,6 +37,7 @@ class AccountController extends Controller
 
     public function logout(){
         Auth::logout();
+        alert()->success('Success', 'Logout success !');
         return redirect()->route('logon.index');
     }
 
