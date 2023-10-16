@@ -18,8 +18,7 @@ class AdminAuthenticate
     public function handle(Request $request, Closure $next)
     {   
         if(Auth::check($request)){
-            alert()->success('Success', 'Logon success !');
-
+            
             return $next($request);
         }else{
             alert()->error('Fail', 'Logon fail, incorrect email or password !');

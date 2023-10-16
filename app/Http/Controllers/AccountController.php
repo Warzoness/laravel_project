@@ -31,6 +31,7 @@ class AccountController extends Controller
         if(Auth::attempt(['email' => $req->email, 'password' => $req->password])){
             return redirect()->route('dashboard.index');
         }else{
+            alert()->error('Fail', 'Logon fail, incorrect email or password !');
             return redirect()->back();
         }
     }

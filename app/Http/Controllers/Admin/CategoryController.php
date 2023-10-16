@@ -9,7 +9,6 @@ use App\Models\Admin\Category;
 use App\Models\Admin\Product;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
-use DB;
 
 class CategoryController extends Controller
 {
